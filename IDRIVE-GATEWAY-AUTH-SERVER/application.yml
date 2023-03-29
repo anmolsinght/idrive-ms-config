@@ -1,7 +1,6 @@
 server:
   port: 8080
-read-database: ENC(ZkXeHwommQo9ofxJlMKVHB361eHY37EE)
-write-database: ENC(qWiVycpkcBlna65SwELeJ+rH4vhX783t)
+
 spring:
   application:
     name: IDRIVE-GATEWAY-AUTH-SERVER
@@ -26,17 +25,7 @@ spring:
             - Path=/web-log/**
           filters:
             - AuthenticationFilter
-  datasource:
-    jdbcUrl: ENC(iuUF9zNM6zXkCbYWI9ynQOUM5OqmPtuJi9BOiKIqGRUxastBkaS+7GV4m/SkrKUyAwVAQHF/Fgoor3Su0NpfQxdnpr+HegGWwQUQ6pPDNhD1L3ovyzKW3lon0zxBVyqTQOhjFgCPI7vEl9VoXIAdHg==)
-    username: ENC(ChpRTj6TEVDYWPX5MgM4BA==)
-    driverClassName: com.mysql.cj.jdbc.Driver
-    password: ENC(YtbTwrvIzUx2Zmika/WZH6+WuGlsrnwc)
-  second-db:
-    username: ENC(ChpRTj6TEVDYWPX5MgM4BA==)
-    driverClassName: com.mysql.cj.jdbc.Driver
-    jdbcUrl: ENC(lHnPdjB3i9tHyAfpnAt+5Ivpq824sZc/PbJVr6fhSssnA+56Lsvg8Zh4V5aIUNrUZ0/BGp9B+MXYhW6Rd31CrQUsz52SX72Tc8Dlcu2IznbrBKYxXhcBDVWR71UGndTiCk2jW+JOMOssDziVFBC3fg==)
-    password: ENC(YtbTwrvIzUx2Zmika/WZH6+WuGlsrnwc)
-
+  
 eureka:
   client:
     enabled: true
@@ -44,17 +33,3 @@ eureka:
       defaultZone: http://localhost:8761/eureka
   instance:
     prefer-ip-address: true
-
-logging:
-  level:
-    '[org.springframework.cloud.gateway]': DEBUG
-
-jwt:
-  secret: ENC(/aKe8JbZEQUlI3cd+YaL/A==)
-  validity: 1440
-  authDisabled: false
-
-jasypt:
-  encryptor:
-    password: idrive
-    algorithm: PBEWithMD5AndDES
